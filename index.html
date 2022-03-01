@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
   <title>My page</title>
 </head>
 <body>
   <header class="main-header">
     <div class="main-header__menu">
-      <ul>
+      <ul class="main-header__menu_list">
         <li class="main-header__menu_item"><a href="#">Home</a></li>
         <li class="main-header__menu_item"><a href="#">About me</a></li>
         <li class="main-header__menu_item"><a href="#">Skills</a></li>
@@ -19,21 +24,21 @@
     </div>
     <div class="main-header__description">
       <div class="main-header__description_name">Evgeny Korolev</div>
-      <div class="main-header__description_profession">Frontend developer</div>
+      <div class="main-header__description_profession">Frontend developer, 38 years, Krasnoyarsk</div>
       <div class="main-header__description_language">Ru|Eng</div>
     </div>
     <div class="main-header__image">
-      <img class="main-header__image_photo" src="#" alt="Evgeny Korolev">
+        <img class="main-header__image_photo" src="./img/founder.png" width="943px" alt="Evgeny Korolev">
     </div>
   </header>
   <main class="personal-description">
     <h2>About me</h2>
     <div class="personal-description__content">
-      <ul class="personal-description__list">
+      <div class="personal-description__list">
         <div class="personal-description__list_item">Hi, I'm Evgeny - Frontend developer from Krasnoyarsk. <br> I'm intrested in development and everything connected with it.</div>
         <div class="personal-description__list_item">I'm studying at courses "React developer" <br> at HTML Academy!</div>
         <div class="personal-description__list_item">Ready to start an interesting project with you!</div>
-      </ul>
+      </div>
     </div>
   </main>
   <section class="skills">
