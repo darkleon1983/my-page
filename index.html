@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
   <title>My page</title>
 </head>
+
 <body>
   <header class="main-header">
     <div class="main-header__menu">
@@ -20,41 +21,81 @@
         <li class="main-header__menu_item"><a href="#">Skills</a></li>
         <li class="main-header__menu_item"><a href="#">Portfolio</a></li>
         <li class="main-header__menu_item"><a href="#">Contacts</a></li>
-      </ul>
+        <li><button class="menu-button" type="button"><span class="visually-hidden">Открыть меню</span></button><li>
+        </ul>
     </div>
     <div class="main-header__description">
-      <div class="main-header__description_name">Evgeny Korolev</div>
-      <div class="main-header__description_profession">Frontend developer, 38 years, Krasnoyarsk</div>
+      <div class="main-header__description_name item_1">Evgeny Korolev</div>
+      <div class="main-header__description_profession item_2">Frontend developer, 38 years, Krasnoyarsk</div>
       <div class="main-header__description_language">Ru|Eng</div>
+      <div class="main-header__description_button item_3">
+        <div class="main-header__menu_item menu-button__mobile"><svg width="33" height="20" viewBox="0 0 33 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="33" height="3.83721" fill="black"/>
+          <rect y="7.67383" width="33" height="3.83721" fill="black"/>
+          <rect y="15.3496" width="33" height="3.83721" fill="black"/>
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="main-header__image">
-        <img class="main-header__image_photo" src="./img/founder.png" width="943px" alt="Evgeny Korolev">
+      <img class="main-header__image_photo" src="./img/founder.png" width="943px" alt="Evgeny Korolev">
     </div>
   </header>
   <main class="personal-description">
     <h2>About me</h2>
     <div class="personal-description__content">
       <div class="personal-description__list">
-        <div class="personal-description__list_item">Hi, I'm Evgeny - Frontend developer from Krasnoyarsk. <br> I'm intrested in development and everything connected with it.</div>
-        <div class="personal-description__list_item">I'm studying at courses "React developer" <br> at HTML Academy!</div>
-        <div class="personal-description__list_item">Ready to start an interesting project with you!</div>
+        <div class="personal-description__list_item">Hi, I'm Evgeny - Frontend developer from Krasnoyarsk. <br> I'm
+          intrested in development and everything connected with it.</div>
+        <div class="personal-description__list_item">I'm studying at courses "React developer" <br> at HTML Academy!
+        </div>
+        <div class="personal-description__list_item">I'm eady to start an interesting project with you!</div>
       </div>
     </div>
   </main>
   <section class="skills">
-    <div class="skills__item heading">Skills</div>
-    <div class="skills__item">I'm good at such technologies:</div>
-    <div class="skills__item">
-      <p>HTML 5</p>
-    </div>
-    <div class="skills__item">
-       <p>CSS 3</p>
-    </div>
-    <div class="skills__item">
-      <p>JavaScript</p>
-    </div>
-    <div class="skills__item">
-      <p>Figma</p>
+    <h3 class="skills__item heading">Skills</h3>
+    <div class="skills__items-list">
+      <div class="skills__items-list_item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+          <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
+          <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
+          <path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z" />
+          <path fill="#EEE"
+            d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z" />
+        </svg>
+        <p>HTML 5</p>
+      </div>
+      <div class="skills__items-list_item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+          <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
+          <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
+          <path fill="#FFF"
+            d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z" />
+          <path fill="#EEE"
+            d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z" />
+        </svg>
+        <p>CSS 3</p>
+      </div>
+      <div class="skills__items-list_item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+          <path fill="#ffd600" d="M6,42V6h36v36H6z" />
+          <path fill="#000001"
+            d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z" />
+        </svg>
+        <p>JavaScript</p>
+      </div>
+      <div class="skills__items-list_item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+          <path fill="#e64a19" d="M26,17h-8c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h8V17z" />
+          <path fill="#7c4dff" d="M25,31h-7c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7V31z" />
+          <path fill="#66bb6a"
+            d="M18,45L18,45c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7v7C25,41.866,21.866,45,18,45z" />
+          <path fill="#ff7043" d="M32,17h-7V3h7c3.866,0,7,3.134,7,7v0C39,13.866,35.866,17,32,17z" />
+          <circle cx="32" cy="24" r="7" fill="#29b6f6" />
+        </svg>
+        <p>Figma</p>
+      </div>
     </div>
   </section>
   <section class="portfolio">
@@ -77,17 +118,18 @@
       <h5>Contacts</h5>
     </div>
     <div class="main-footer__message">Want to know more or just chat? You are welcome!</div>
-    <div class="main-footer__button">
-      <button class="main-footer__button">Send message</button>
+    <div class="main-footer__button-container">
+      <button class="main-footer__button-container_button">Send message</button>
     </div>
     <div class="main-footer__social">
       <ul class="main-footer__social_list">
-        <li class="main-footer__social_list-item">Linked in</li>
-        <li class="main-footer__social_list-item">Indtagram</li>
-        <li class="main-footer__social_list-item">Facebook</li>
+        <li class="main-footer__social_list-item">LIn</li>
+        <li class="main-footer__social_list-item">In</li>
+        <li class="main-footer__social_list-item">FB</li>
         <li class="main-footer__social_list-item">VK</li>
       </ul>
     </div>
   </footer>
 </body>
+
 </html>

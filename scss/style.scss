@@ -1,10 +1,30 @@
 $mobile-width: 768px;
-$desktop-width: 1200px;
+$desktop-width: 769px;
 
 body {
   font-family: 'Montserrat', sans-serif;
-  display: grid;
-  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    display: grid;
+  }
+  
+  @media (min-width: $desktop-width) {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 img {
@@ -15,7 +35,8 @@ img {
   max-width: 943px;
 
   @media (max-width: $mobile-width) {
-    color: red;
+    display: grid;
+    justify-content: center;
   }
 }
 
@@ -23,12 +44,25 @@ img {
   border-bottom: 1px solid rgba(130, 130, 130, 1);
 }
 .main-header__menu_list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  justify-content: space-between;
-  padding-bottom: 32px;
+    position: relative;
+
+    @media (max-width: $mobile-width) {
+    display: grid;
+    grid-template-rows: repeat(5, 68px);
+    justify-content: start;
+    font-weight: bold;
+    color:rgba(130, 130, 130, 1);
+  }
   
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    padding-bottom: 32px;
+  }
+
 }
+
 
 .main-header__menu_list a {
   text-decoration: none;
@@ -40,11 +74,48 @@ img {
 }
 
 .main-header__description {
+  width: 95%;
+  @media (max-width: $mobile-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(70px, auto);
+  }
   display: grid;
   grid-template-columns: 123px 155px 20px;
   grid-auto-columns: minmax(50px, auto);
   justify-content: space-between;
   align-items: baseline;
+}
+
+.item_1 {
+  @media (max-width: $mobile-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.item_2 {
+  @media (max-width: $mobile-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+  }
+}
+
+.item_3 {
+  @media (max-width: $mobile-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    justify-self: center;
+    align-self: start;
+    margin-top: 10px;
+  }
 }
 .main-header__description_name {
   font-size: 47px;
@@ -56,15 +127,104 @@ img {
 }
 
 .main-header__description_language {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
   writing-mode: tb-rl;
-  transform:rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .main-header__description {
   padding-top: 40px;
 }
 
-.personal-description__content {
+.personal-description h2 {
+  text-align: center;
+}
+
+.personal-description__list {
+  min-height: 218px;
   display: grid;
-  grid-template-columns: 120px 120px 120px;
+  justify-content: center;
+}
+
+.personal-description__list_item {
+  text-align: center;
+}
+
+
+.skills h3 {
+  text-align: center;
+}
+.skills__items-list {
+  min-height: 218px;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  justify-content: space-between;
+}
+.skills__items-list_item {
+  text-align: center;
+}
+
+.portfolio {
+  display: none;
+}
+
+.main-footer {
+  display: grid;
+  // grid-template-rows: repeat(4, 50px);
+  grid-auto-rows: minmax(50px, auto);
+  justify-content: center;
+}
+.main-footer h5 {
+  text-align: center;
+}
+
+.main-footer__button-container {
+  text-align: center;
+}
+
+.main-footer__social {
+  display: grid;
+  justify-content: center;
+}
+.main-footer__social_list {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+}
+
+.main-footer__button-container_button {
+  background-color: rgba(7, 7, 7, 1);
+  width: 180px;
+  height: 42px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  line-height: 18px;
+  color: white;
+}
+
+// .main-nav--closed .main-nav__toggle {
+//   content: "";
+//   position: absolute;
+//   top: 15px;
+//   left: 17px;
+//   width: 36px;
+//   height: 2px;
+//   background-color: #ffffff;
+//   box-shadow: 0 8px 0 0 rgba(255, 255, 255, 1), 0 16px 0 0 rgba(255, 255, 255, 1);
+// }
+
+.menu-button {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.menu-button__mobile {
+  position: absolute;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
