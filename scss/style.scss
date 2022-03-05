@@ -42,6 +42,9 @@ img {
 
 .main-header__menu {
   border-bottom: 1px solid rgba(130, 130, 130, 1);
+  // @media (max-width: $mobile-width) {
+  //   display: none;
+  // }
 }
 .main-header__menu_list {
     position: relative;
@@ -85,6 +88,24 @@ img {
   grid-auto-columns: minmax(50px, auto);
   justify-content: space-between;
   align-items: baseline;
+}
+.main-header__description_button {
+  position: relative;
+}
+
+.cross-button {
+  width: 50px;
+  height: 50px;
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -400px;
+    left: -50px;
+  }
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .item_1 {
@@ -152,18 +173,36 @@ img {
   text-align: center;
 }
 
+// .skills {
+//   @media (max-width: $mobile-width) {
+//     display: grid;
+//     grid-template-rows: repeat(4, auto);
+//   }
+// }
 
 .skills h3 {
   text-align: center;
 }
 .skills__items-list {
-  min-height: 218px;
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
-  justify-content: space-between;
+ 
+
+  @media (max-width: $mobile-width) {
+    display: grid;
+    grid-template-rows: minmax(100px, auto)
+  }
+  @media (min-width: $desktop-width) {
+    min-height: 218px;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    justify-content: space-between;
+  }
 }
 .skills__items-list_item {
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+  }
 }
 
 .portfolio {
@@ -222,9 +261,53 @@ img {
 }
 
 .menu-button__mobile {
+  width: 50px;
+  height: 50px;
   position: absolute;
 
-  @media (min-width: $desktop-width) {
-    display: none;
+   @media (min-width: $desktop-width) {
+     display: none;
   }
 }
+
+ .invisible {
+   @media (max-width: $mobile-width) {
+     display: none;
+   }
+ }
+
+ .home-item {
+  // width: 50px;
+  // height: 50px;
+  top: 0;
+  right: auto;
+  left: 0;
+
+&::before,
+&::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 480px;
+  width: 36px;
+  height: 2px;
+  background-color: black;
+  @media (max-width: $mobile-width) {
+    background-color: #ffffff;
+  }
+}
+
+&::before {
+  transform: rotate(45deg);
+}
+
+&::after {
+  transform: rotate(-45deg);
+}
+
+&:active::before,
+&:active::after {
+  background-color:rgba(255, 255, 255, 1);
+}
+}
+

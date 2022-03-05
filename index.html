@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,41 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap"
+    rel="stylesheet">
   <title>My page</title>
 </head>
 
 <body>
   <header class="main-header">
     <div class="main-header__menu">
-      <ul class="main-header__menu_list">
+      <ul class="main-header__menu_list invisible">
         <li class="main-header__menu_item"><a href="#">Home</a></li>
         <li class="main-header__menu_item"><a href="#">About me</a></li>
         <li class="main-header__menu_item"><a href="#">Skills</a></li>
         <li class="main-header__menu_item"><a href="#">Portfolio</a></li>
         <li class="main-header__menu_item"><a href="#">Contacts</a></li>
-        <li><button class="menu-button" type="button"><span class="visually-hidden">Открыть меню</span></button><li>
-        </ul>
+      </ul>
     </div>
     <div class="main-header__description">
       <div class="main-header__description_name item_1">Evgeny Korolev</div>
       <div class="main-header__description_profession item_2">Frontend developer, 38 years, Krasnoyarsk</div>
       <div class="main-header__description_language">Ru|Eng</div>
       <div class="main-header__description_button item_3">
-        <div class="main-header__menu_item menu-button__mobile"><svg width="33" height="20" viewBox="0 0 33 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="33" height="3.83721" fill="black"/>
-          <rect y="7.67383" width="33" height="3.83721" fill="black"/>
-          <rect y="15.3496" width="33" height="3.83721" fill="black"/>
+      <div>
+        <div class="main-header__menu_item menu-button__mobile"><svg width="33" height="20" viewBox="0 0 33 20"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="33" height="3.83721" fill="black" />
+            <rect y="7.67383" width="33" height="3.83721" fill="black" />
+            <rect y="15.3496" width="33" height="3.83721" fill="black" />
           </svg>
+        </div>
+        <div class="cross-button invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M4.293,18.293,10.586,12,4.293,5.707A1,1,0,0,1,5.707,4.293L12,10.586l6.293-6.293a1,1,0,1,1,1.414,1.414L13.414,12l6.293,6.293a1,1,0,1,1-1.414,1.414L12,13.414,5.707,19.707a1,1,0,0,1-1.414-1.414Z" />
+          </svg>
+        </div>
         </div>
       </div>
     </div>
@@ -130,6 +140,7 @@
       </ul>
     </div>
   </footer>
+  <script src="./index.js"></script>
 </body>
 
 </html>

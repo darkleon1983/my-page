@@ -1,2 +1,2 @@
-# selfBarb
-self made barbershop site
+# my page
+my site
